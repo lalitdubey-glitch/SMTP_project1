@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <h1 class="text-center text-secondary">Forgot Password??</h1>
+    <form method="post" id="FgtPass">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
+                <label>Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email"/>  
+
+                <input type="button" value="Send OTP"  id="sendOTP" class="btn btn-primary my-3" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div style="display:none;" id="loader">
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success">
+    </div>
+    <p class="text-success">Sending OTP Please Wait...</p>
+</div>

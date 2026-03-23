@@ -1,0 +1,55 @@
+﻿@model EditForm
+ 
+<div class="container">
+   <form method="post" enctype="multipart/form-data" id="SignupForm">
+        <div class="row">
+            <h1 class="text-center">@(Model.id != null ? "Edit Form" : "SignUP")</h1>
+            <div class="col-lg-6 col-sm-12 col-md-12 mx-auto">
+                <input type="text" name="id" hidden id="id" class="form-control" value="@Model.id"/>
+                <label>Name</label>
+                <input type="text" name="name" value="@Model.name" id="name" class="form-control my-2" />
+                <label>Email</label>
+                @{
+                    if (@Model.email != null)
+                    {
+                        <input type="email" name="email" value="@Model.email" readonly id="email" class="form-control my-2" />
+                    }
+                    else
+                    {
+                        <input type="email" name="email" id="email" class="form-control my-2" />
+                    }
+                }
+               
+               
+                @{
+                    if (Model.pass == null)
+                    {
+                        <label>Password</label>
+                        <input type="password" name="pass" placeholder="Enter Password" id="pass" class="form-control my-2" />
+                    } 
+                }
+               
+                <label>Profile Image</label>
+                <input type="file" name="img" id="img" class="form-control my-2" />
+                @{
+                    if (Model.img != null)
+                    {
+                        <img src="/UserImages/@Model.img" height="50px" width="50px"/>
+                    }
+                }
+
+                <input type="button" id="save" value="@(Model.id!=null?"Edit":"Save")" class="btn btn-success" />
+
+            </div>
+        </div>
+   </form>
+</div>
+
+<div style="display:none;" id="loader">
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success">
+    </div>
+    <p class="text-success">Saving Please Wait...</p>
+</div>

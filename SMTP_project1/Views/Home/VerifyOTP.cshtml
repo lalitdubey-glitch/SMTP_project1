@@ -1,0 +1,22 @@
+﻿<div class="container">
+    <h1 class="text-center text-success">Verify OTP</h1>
+    <form method="post" id="verifyForm">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
+                <label>Enter OTP</label>
+                <input type="text" name="otp" id="otp" class="form-control" />
+
+                <input type="button" value="Verify OTP" id="vOTP" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>
+
+<div style="display:none;" id="loader">
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success"> </div>
+    <div class="spinner-grow text-success">
+    </div>
+    <p class="text-success">Verifyig.. Please Wait...</p>
+</div>

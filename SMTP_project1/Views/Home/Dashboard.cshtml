@@ -1,0 +1,33 @@
+﻿<h1 class="text-center">Dashboard</h1>
+ 
+
+<div class="card" style="width: 18rem;">
+    
+    <img src="~/UserImages/@ViewBag.img" class="card-img-top" alt="...">
+    <div class="card-body">
+        @{
+            if (@ViewBag.isActive)
+            {
+                <span class="bg-success rounded p-1 text-white text-center">Active</span>
+
+            }
+            else
+            {
+                <span class="bg-danger rounded p-1 text-white"> inActive</span>
+
+            }
+        } 
+        <h5 class="card-title my-2">@ViewBag.name</h5>
+        <p class="card-text">@ViewBag.email</p> 
+
+        <div class="row">
+            <div class="col-6">
+                <a href="/home/ForgotPass/" class="btn btn-primary">Change Password</a>
+            </div>
+            <div class="col-6">
+                <a href="/home/SignUp?id=@ViewBag.id" id="edit" class="btn btn-secondary">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+ 
